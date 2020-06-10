@@ -5,7 +5,7 @@ export default class Level extends Lightning.Component{
     static _template(){
         return {
             Image: {
-
+                texture: lng.Tools.getRoundRect(100, 100, 50, 0, 0xff808080, true, 0xff808080)
             },
             Title: {
                 y: 250, x: 100, mount: 0.5, alpha: 0, zIndex: 2,

@@ -1,4 +1,5 @@
 import { Lightning, Utils, Router } from 'wpe-lightning-sdk';
+import Menu from './components/menu/Menu'
 import provider from "./lib/data-provider";
 import routes from "./lib/routes";
 import {init as initApi} from "./lib/Api"
@@ -29,8 +30,11 @@ export default class App extends Lightning.Component {
             },
             Widgets: {
                 Menu:{
-                    // @todo; this is an extra assignment,
-                    // add Menu
+                    type: Menu, items:[
+                        {label:'Movies'},
+                        {label:'Series'},
+                        {label:'Exit'}
+                    ]
                 }
             },
             Loading: {
