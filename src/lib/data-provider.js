@@ -11,6 +11,8 @@ import {getMovies} from './Api';
 */
 export default () => {
 
+    Router.widget("movies", ["Menu"]);
+
     Router.boot(async()=> {
         // this will always be called
     });

@@ -1,4 +1,4 @@
-import {Lightning, Utils} from 'wpe-lightning-sdk';
+import {Lightning, Utils, Router} from 'wpe-lightning-sdk';
 import {List} from "../components"
 import {getImgUrl as getImgUrl} from '../lib/tools'
 
@@ -58,6 +58,14 @@ export default class Main extends Lightning.Component{
                 movies: __data.results
             }
         })
+    }
+
+    _handleUp() {
+        Router.focusWidget("Menu");
+    }
+
+    _handleDown() {
+        Router.restoreFocus();
     }
 
     _unfocus() {
