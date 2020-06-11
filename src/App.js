@@ -2,7 +2,6 @@ import { Lightning, Utils, Router } from 'wpe-lightning-sdk';
 import provider from "./lib/data-provider";
 import routes from "./lib/routes";
 import {init as initApi} from "./lib/Api"
-import {Splash} from "./pages";
 
 export default class App extends Lightning.Component {
 
@@ -28,9 +27,6 @@ export default class App extends Lightning.Component {
             Pages: {
                 forceZIndexContext: true, w: 1000
             },
-            Splash:{
-               type: Splash
-            },
             Widgets: {
                 Menu:{
                     // @todo; this is an extra assignment,
@@ -50,10 +46,6 @@ export default class App extends Lightning.Component {
 
     _handleEnter(){
         // call
-    }
-
-    _getFocused(){
-        return this.tag("Splash")
     }
 
     _handleLeft(){

@@ -5,15 +5,8 @@ export const init = (stageInstance) =>{
     stage = stageInstance;
 };
 
-
-/**
- * @todo:
- * call get with the correct url
- * https://api.themoviedb.org/3/movie/popular
- * and return the data
- */
 export const getMovies = async()=> {
-
+    return get(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`)
 };
 
 const get = (url)=> {
